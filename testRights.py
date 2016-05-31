@@ -28,16 +28,16 @@ Execution:
 - python testRights.py <searchPathScope> [excludedDir1 ... [excludedDirN]]
 
 Results:
-    Directori amb escriptura: %s /tmp
-    Directori amb escriptura: %s /dev/shm
-    Directori amb escriptura: %s /dev/mqueue
-    Directori amb escriptura: %s /proc/247/cwd
-    Directori amb escriptura: %s /proc/247/task/247/cwd
-    Directori amb escriptura: %s /proc/253/cwd
-    Directori amb escriptura: %s /proc/253/task/253/cwd
-    Directori amb escriptura: %s /run/lock
-    Directori amb escriptura: %s /var/lock
-    Directori amb escriptura: %s /var/tmp
+    Writable directory: /tmp
+    Writable directory: /dev/shm
+    Writable directory: /dev/mqueue
+    Writable directory: /proc/247/cwd
+    Writable directory: /proc/247/task/247/cwd
+    Writable directory: /proc/253/cwd
+    Writable directory: /proc/253/task/253/cwd
+    Writable directory: /run/lock
+    Writable directory: /var/lock
+    Writable directory: /var/tmp
 """
 
 import os
@@ -59,7 +59,7 @@ def testDir(path):
     except:
         print ("Unexpected error:", sys.exc_info()[0])
     else:
-        print "Writable directory: %s", path
+        print "Writable directory: %s" % path
         f.close()
         os.remove(path + '/' + FILENAME)
 
