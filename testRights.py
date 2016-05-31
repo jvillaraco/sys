@@ -26,6 +26,18 @@ Requirements:
 
 Execution:
 - python testRights.py <searchPathScope> [excludedDir1 ... [excludedDirN]]
+
+Results:
+    Directori amb escriptura: %s /tmp
+    Directori amb escriptura: %s /dev/shm
+    Directori amb escriptura: %s /dev/mqueue
+    Directori amb escriptura: %s /proc/247/cwd
+    Directori amb escriptura: %s /proc/247/task/247/cwd
+    Directori amb escriptura: %s /proc/253/cwd
+    Directori amb escriptura: %s /proc/253/task/253/cwd
+    Directori amb escriptura: %s /run/lock
+    Directori amb escriptura: %s /var/lock
+    Directori amb escriptura: %s /var/tmp
 """
 
 import os
